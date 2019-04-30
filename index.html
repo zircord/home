@@ -50,84 +50,60 @@
  <script>
      // Define a new module for our app
 var app = angular.module("instantSearch", []);
-
 // Create the instant search filter
-
 app.filter('searchFor', function(){
-
 	// All filters must return a function. The first parameter
 	// is the data that is to be filtered, and the second is an
 	// argument that may be passed with a colon (searchFor:searchString)
-
 	return function(arr, searchString){
-
 		if(!searchString){
 			return arr;
 		}
-
 		var result = [];
-
 		searchString = searchString.toLowerCase();
-
 		// Using the forEach helper method to loop through the array
 		angular.forEach(arr, function(item){
-
-			if(item.keywords.toLowerCase().indexOf(searchString) !== -1){
+			if(item.title.toLowerCase().indexOf(searchString) !== -1){
 				result.push(item);
 			}
-
 		});
-
 		return result;
 	};
-
 });
-
 // The controller
-
 function InstantSearchController($scope){
-
 	// The data model. These items would normally be requested via AJAX,
 	// but are hardcoded here for simplicity. See the next example for
 	// tips on using AJAX.
-
 	$scope.items = [
 		{
 			url: 'https://discord.gg/animalcrossing',
 			title: 'Animal Crossing Mayors',
-			image: 'http://dlp2gfjvaz867.cloudfront.net/product_photos/15204499/leaf-01_400w.jpg',
-			keywords: 'acnl trade isabelle villagers turnips fossils adopt'
+			image: 'http://dlp2gfjvaz867.cloudfront.net/product_photos/15204499/leaf-01_400w.jpg'
 		},
 		{
 			url: 'https://discord.gg/GDE98MZ',
 			title: '/r/rabbits',
-			image: 'https://i.redd.it/ptkx9jmun1u01.jpg',
-			keywords: 'rabbit rabbits holland lop reddit timothy hay bunny bunnies'
+			image: 'https://i.redd.it/ptkx9jmun1u01.jpg'
 		},
 		{
 			url: 'https://discordapp.com/invite/Mswprxe',
 			title: 'Gamico',
-			image: 'https://cdn.discordapp.com/icons/476310238329438218/a59d2f18e1fe4b01b574bc303dca59d0.png',
-			keywords: 'games video games unreal engine reddit 4chan fortnite spellbreak'
+			image: 'https://cdn.discordapp.com/icons/476310238329438218/a59d2f18e1fe4b01b574bc303dca59d0.png'
 		},
 		{
 			url: 'https://discordapp.com/invite/uV5y7RY',
 			title: 'ChessBot',
-			image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/ChessSet.jpg/250px-ChessSet.jpg',
-			keywords: 'chess strategy game shogi"
+			image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/ChessSet.jpg/250px-ChessSet.jpg'
 		},
 		{
 			url: 'https://discord.gg/JRPG',
 			title: 'Persona 5',
-			image: 'https://vrcmods.com/imgs/0lS1USllyeKO.jpg',
-			keywords: 'persona JRPG anime japan joker akira video games video game', 
+			image: 'https://vrcmods.com/imgs/0lS1USllyeKO.jpg'
 		}
 		
 	];
-
-
 }
-
       </script>
     
     
@@ -148,16 +124,13 @@ body {
   background: #202b38;
   text-rendering: optimizeLegibility;
 }
-
 button, input, textarea {
   transition: background-color 0.1s linear, border-color 0.1s linear, color 0.1s linear, box-shadow 0.1s linear, transform 0.1s ease;
 }
-
 h1 {
   font-size: 2.2em;
   margin-top: 0;
 }
-
 h1,
 h2,
 h3,
@@ -166,7 +139,6 @@ h5,
 h6 {
   margin-bottom: 12px;
 }
-
 h1,
 h2,
 h3,
@@ -176,7 +148,6 @@ h6,
 strong {
   color: #ffffff;
 }
-
 h1,
 h2,
 h3,
@@ -188,51 +159,41 @@ strong,
 th {
   font-weight: 600;
 }
-
 blockquote {
   border-left: 4px solid #0096bfab;
   margin: 1.5em 0em;
   padding: 0.5em 1em;
   font-style: italic;
 }
-
 blockquote > footer {
   margin-top: 10px;
   font-style: normal;
 }
-
 blockquote cite {
   font-style: normal;
 }
-
 address {
   font-style: normal;
 }
-
 a[href^='mailto']::before {
   content: '📧 ';
 }
-
 a[href^='tel']::before {
   content: '📞 ';
 }
-
 a[href^='sms']::before {
   content: '💬 ';
 }
-
 button,
 input[type='submit'],
 input[type='button'],
 input[type='checkbox'] {
   cursor: pointer;
 }
-
 input:not([type='checkbox']):not([type='radio']),
 select {
   display: block;
 }
-
 input, select, button, textarea {
   color: #ffffff;
   background-color: #161f27;
@@ -245,37 +206,31 @@ input, select, button, textarea {
   border-radius: 6px;
   outline: none;
 }
-
 input:not([type='checkbox']):not([type='radio']),
 select, button, textarea {
   -webkit-appearance: none;
 }
-
 textarea {
   margin-right: 0;
   width: 100%;
   box-sizing: border-box;
   resize: vertical;
 }
-
 button, input[type='submit'], input[type='button'] {
   padding-right: 30px;
   padding-left: 30px;
 }
-
 button:hover,
 input[type='submit']:hover,
 input[type='button']:hover {
   background: #324759;
 }
-
 input:focus,
 select:focus,
 button:focus,
 textarea:focus {
   box-shadow: 0 0 0 2px #0096bfab;
 }
-
 input[type='checkbox']:active,
 input[type='radio']:active,
 input[type='submit']:active,
@@ -283,7 +238,6 @@ input[type='button']:active,
 button:active {
   transform: translateY(2px);
 }
-
 input:disabled,
 select:disabled,
 button:disabled,
@@ -291,89 +245,71 @@ textarea:disabled {
   cursor: not-allowed;
   opacity: .5;
 }
-
 ::-webkit-input-placeholder {
   color: #a9a9a9;
 }
-
 :-ms-input-placeholder {
   color: #a9a9a9;
 }
-
 ::-ms-input-placeholder {
   color: #a9a9a9;
 }
-
 ::placeholder {
   color: #a9a9a9;
 }
-
 a {
   text-decoration: none;
   color: #41adff;
 }
-
 a:hover {
   text-decoration: underline;
 }
-
 code, kbd {
   background: #161f27;
   color: #ffbe85;
   padding: 5px;
   border-radius: 6px;
 }
-
 pre > code {
   padding: 10px;
   display: block;
   overflow-x: auto;
 }
-
 img {
   max-width: 70px;
   max-height: 70px;
 }
-
 hr {
   border: none;
   border-top: 1px solid #dbdbdb;
 }
-
 table {
   border-collapse: collapse;
   margin-bottom: 10px;
   width: 100%;
 }
-
 td, th {
   padding: 6px;
   text-align: left;
 }
-
 th {
   border-bottom: 1px solid #dbdbdb;
 }
-
 tbody tr:nth-child(even) {
   background-color: #161f27;
 }
-
 ::-webkit-scrollbar {
   height: 10px;
   width: 10px;
 }
-
 ::-webkit-scrollbar-track {
   background: #161f27;
   border-radius: 6px;
 }
-
 ::-webkit-scrollbar-thumb {
   background: #324759;
   border-radius: 6px;
 }
-
 ::-webkit-scrollbar-thumb:hover {
   background: #415c73;
 }
@@ -381,10 +317,6 @@ tbody tr:nth-child(even) {
 ul {
 list-style-type: none;
 }
-
 /*# sourceMappingURL=dark.css.map */
-
 </style>
-
-
 </body></html>
