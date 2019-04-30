@@ -72,7 +72,7 @@ app.filter('searchFor', function(){
 		// Using the forEach helper method to loop through the array
 		angular.forEach(arr, function(item){
 
-			if(item.title.toLowerCase().indexOf(searchString) !== -1){
+			if(item.keywords.toLowerCase().indexOf(searchString) !== -1){
 				result.push(item);
 			}
 
@@ -95,27 +95,32 @@ function InstantSearchController($scope){
 		{
 			url: 'https://discord.gg/animalcrossing',
 			title: 'Animal Crossing Mayors',
-			image: 'http://dlp2gfjvaz867.cloudfront.net/product_photos/15204499/leaf-01_400w.jpg'
+			image: 'http://dlp2gfjvaz867.cloudfront.net/product_photos/15204499/leaf-01_400w.jpg',
+			keywords: 'acnl, trade, isabelle, villagers, turnips, fossils, adopt'
 		},
 		{
 			url: 'https://discord.gg/GDE98MZ',
 			title: '/r/rabbits',
-			image: 'https://i.redd.it/ptkx9jmun1u01.jpg'
+			image: 'https://i.redd.it/ptkx9jmun1u01.jpg',
+			keywords: 'rabbit, rabbits, holland lop, reddit, timothy hay, bunny, bunnies'
 		},
 		{
 			url: 'https://discordapp.com/invite/Mswprxe',
 			title: 'Gamico',
-			image: 'https://cdn.discordapp.com/icons/476310238329438218/a59d2f18e1fe4b01b574bc303dca59d0.png'
+			image: 'https://cdn.discordapp.com/icons/476310238329438218/a59d2f18e1fe4b01b574bc303dca59d0.png',
+			keywords: 'games, video games, unreal engine, reddit, 4chan, fortnite, spellbreak'
 		},
 		{
 			url: 'https://discordapp.com/invite/uV5y7RY',
 			title: 'ChessBot',
-			image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/ChessSet.jpg/250px-ChessSet.jpg'
+			image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/ChessSet.jpg/250px-ChessSet.jpg',
+			keywords: 'chess, strategy, game, shogi"
 		},
 		{
 			url: 'https://discord.gg/JRPG',
 			title: 'Persona 5',
-			image: 'https://vrcmods.com/imgs/0lS1USllyeKO.jpg'
+			image: 'https://vrcmods.com/imgs/0lS1USllyeKO.jpg',
+			keywords: 'persona, JRPG, anime, japan, joker, akira, video games, video game', 
 		}
 		
 	];
