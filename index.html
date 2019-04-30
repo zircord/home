@@ -20,17 +20,19 @@
       For its 100 million users, Discord provides no way to sift through its countless niche communities. Instead, newcomers rely on word-of-mouth or other social media to discover new servers. 
     </p>
     <p>
-	    Built on Go and Angular JS, we offer a natural language-driven search engine intent on fulfilling this need. Zircord uses topic modeling and keyword embeddings to match your server with similarly-minded users. We are currently in early testing stages, and are looking to give specific users early access. Send us a friend request at <b>ajax#8101</b>.  
+	    Built on Go and Angular JS, we offer a natural language-driven search engine intent on fulfilling this need. Zircord uses topic modeling and keyword embeddings to match your server with similarly-minded users. We are currently in testing stages, and are looking to give specific users <b>early access</b>. Send us a friend request at <b>ajax#8101</b>.  
     </p>
       
 	  <a href="https://discordapp.com/api/oauth2/authorize?client_id=572617869322616832&permissions=0&scope=bot">Invite Zircord to your server.</a>
      
 	  <br>
+	  
 
 	<body ng-app="instantSearch" ng-controller="InstantSearchController">
 
 		<div class="bar">
 			<!-- Create a binding between the searchString model and the text field -->
+			<br>
 			<input type="text" ng-model="searchString" placeholder="Find a server" />
 		</div>
 
