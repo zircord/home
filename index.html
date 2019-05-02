@@ -48,10 +48,58 @@
 
 	  	<div ng-app="">
  
-	<p><input type="text" ng-model="name", placeholder="Title"></p>
-	<p><input type="text" ng-model="invite", placeholder="Invite Link"></p>
-	<p><input type="text" ng-model="imageurl", placeholder="Image URL"></p>
-	<p><input type="text" ng-model="keywords", placeholder="Keywords"></p>
+section.content
+  h1.content__heading Add your Discord server:
+
+  form.content__form.contact-form
+  
+
+    .contact-form__input-group
+      label.contact-form__label(
+        for="name"
+      ) Server Title
+      input#name.contact-form__input.contact-form__input--text(
+        name="Server Name"
+        type="text"
+      )
+
+    .contact-form__input-group
+      label.contact-form__label(
+        for="email"
+      ) Invite Link
+      input#email.contact-form__input.contact-form__input--email(
+        name="invite"
+        type="text"
+      )
+
+      
+    .contact-form__input-group
+      label.contact-form__label(
+        for="secret"
+      ) Image URL
+      input#email.contact-form__input.contact-form__input--email(
+        name="image"
+        type="text"
+      )
+      
+    .contact-form__input-group
+      label.contact-form__label(
+        for="email"
+      ) Image URL
+      input#email.contact-form__input.contact-form__input--email(
+        name="Keywords"
+        type="text"
+      )
+
+    button.contact-form__button(
+      type="submit"
+    ) Submit
+
+.results
+  h2.results__heading Form Data
+  pre.results__display-wrapper
+    code.results__display
+
 
 
 	</div>
