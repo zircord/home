@@ -47,18 +47,12 @@
 	</body>
 
 	  	<div ng-app="">
- 
-	<p><input type="text" ng-model="name", placeholder="Title"></p>
-	<p><input type="text" ng-model="invite", placeholder="Invite Link"></p>
-	<p><input type="text" ng-model="imageurl", placeholder="Image URL"></p>
-	<p><input type="text" ng-model="keywords", placeholder="Keywords"></p>
+
 <div ng-controller="ExampleController">
 	<form novalidate class="simple-form">
 	    <input type="text", placeholder="Title", ng-model="title.name" /><br />
-	    <input type="text", placeholder="Invite Link", ng-model="invite.link" /><br />\
+	    <input type="text", placeholder="Invite Link", ng-model="invite.link" /><br />
 	    <input type="text", placeholder="Image URL", ng-model="image.url" /><br />
-	    Best Editor: <label><input type="radio" ng-model="user.preference" value="vi" />vi</label>
-	    <label><input type="radio" ng-model="user.preference" value="emacs" />emacs</label><br />
 	    <input type="submit" ng-click="update(user)" value="Save" />
 	 </form>
 </div>
